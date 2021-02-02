@@ -1,0 +1,117 @@
+/*
+COLORS
+secondary.color= cherry pink #FF1744
+primary.color= light blue #E3F2FD
+
+secondary.color.dark= dark red #c4001d
+primary.color.dark= light grey #b1bfca
+
+background.color= white #ffffff
+text.color= dark blue grey #263238
+
+text.color.on.secondary= #ffffff
+
+READ MORE BUTTON styling
+background.color= #FF1744
+text.color= #eceff1
+
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+background-color: #ffffff;
+  font-size: 16px; /* Sets the font size to 16px */
+  font-weight: 300; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #263238;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Roboto Mono', monospace;
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 600;
+}
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.35em;
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #FF1744;
+  text-decoration: none; /* No underlining */
+}
+a:visited { /* visited link */
+  color: #ff616f;
+}
+a:hover,
+a:focus {
+  color: #c4001d;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+a:active { /* selected link */
+  color: #880e4f;
+}
+
+
+/* END of your “styles.css” document. As this is a very specific rule only for hyperlinks that have the button class, it needs to go close to the bottom; otherwise, it could get overwritten by other less specific rules, such as the general styling rules for all of your hyperlinks.*/
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #263238;
+  color: #ffffff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #263238; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+.button:hover,
+.button:focus,
+.button:visited {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+  color: #ffffff;
+}
+.button:active {
+  background-color: #FF1744;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+/* For Contact Buttons */
+.button.contact {
+  background-color: transparent;
+  color: #263238;
+  text-transform: uppercase;
+  border: 2px solid #263238;
+}
+.button.contact:hover {
+  background-color: #263238;
+  color: #ffffff;
+}
+.button.contact:active {
+  background-color: #FF1744;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #FF1744;
+}
