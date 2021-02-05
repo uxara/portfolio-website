@@ -26,6 +26,14 @@ background-color: #ffffff;
   color: #263238;
 }
 
+img {
+  width: 100%;
+}
+svg {
+  width: 5%;
+  max-width: 25px;
+}
+
 h1, h2, h3, h4 {
   font-family: 'Roboto Mono', monospace;
   line-height: 1.4;
