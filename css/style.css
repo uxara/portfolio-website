@@ -223,3 +223,7 @@ main {
   width: 100%;
 }
 
+/*for ABOUT*/
+#skill .row {
+  float: right;
+}
