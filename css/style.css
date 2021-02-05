@@ -174,3 +174,10 @@ main {
 
 
 
+/*for Work*/
+#work h2 {
+  text-align: center; /* Centers text */
+}
+#work .row{ padding-bottom: 25px;}
+
+
