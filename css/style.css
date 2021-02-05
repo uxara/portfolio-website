@@ -215,3 +215,11 @@ main {
 #work .row{ padding-bottom: 25px;}
 
 
+/*for Intro on project sites*/
+#intro {
+  background-color: #E3F2FD;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
