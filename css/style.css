@@ -227,3 +227,25 @@ main {
 #skill .row {
   float: right;
 }
+/*for Footer*/
+#contact { padding-top: 25px; border-top: 1px solid #4a4a4a; }
+
+
+#social svg {
+  width: 40px;
+  margin: 0.80em;
+}
+#social {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+#social ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+#social ul > li {
+  display: inline-block;
+}
