@@ -115,3 +115,39 @@ a:active { /* selected link */
   color: #ffffff;
   border: 2px solid #FF1744;
 }
+/*for NAVBAR*/
+.logo {
+  max-width: 100px;
+}
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #FF1744;
+}
+nav > ul > li > a:visited {
+  color: #ff616f;
+}
+nav > ul > li > a:hover,
+a:focus {
+  color: #c4001d;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+nav > ul > li > a:active { /* selected link */
+  color: #880e4f;
+}
+
+nav {
+  display: inline-block;
+  width: 100%;
+}
+
