@@ -16,34 +16,97 @@ background.color= #FF1744
 text.color= #eceff1
 
 */
-header {
-  background-color: #E3F2FD;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  -webkit-box-shadow: 0px 10px 5px -3px rgba(50, 50, 50, 0.54);
--moz-box-shadow:    0px 10px 5px -3px rgba(50, 50, 50, 0.54);
-box-shadow:         0px 10px 5px -3px rgba(50, 50, 50, 0.54);
-}
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Montserrat', sans-serif;
-background-color: #ffffff;
-  font-size: 16px; /* Sets the font size to 16px */
-  font-weight: 300; /* Sets the font weight to 300 */
-  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-  color: #263238;
-}
 
+
+
+
+
+/* Media */
 img {
   width: 100%;
+  max-width: 1170px;
 }
 svg {
-  width: 5%;
-  max-width: 25px;
+  width: 100%;
+  max-width: 1170px;
+}
+.socialsvg svg {
+  width: 100%;
+  max-width: 30px;
+}
+.socialsvg svg:hover {
+  transform: scale(1.2);
+      cursor: pointer;
+}
+.socialsvg svg:hover {
+  transition: all 0.2s;
+  transform-origin: 50% 50%;
+}
+/* Animation */
+
+@keyframes color-change1 {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+.backclouds {
+  animation-duration: 4s;
+  animation-name: color-change1;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes color-change2 {
+  0% {fill: #ffffff;}
+  50% {fill: #fdcdee;}
+  100% {fill: #fdfdfd;}
+}
+.background {
+  animation-duration: 4s;
+  animation-name: color-change2;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(500px,50px);}
+}
+
+
+.cloud-front {
+  animation-duration: 10s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-back {
+  animation: 24s cloud-move-reverse infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.small-cloud {
+  animation: 14s cloud-move-reverse infinite alternate linear;
+}
+
+
+
+/* Fonts */
+p {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4;
+  font-size: 17px;
 }
 
 h1, h2, h3, h4 {
@@ -72,10 +135,7 @@ h4 {
   font-weight: 600;
 }
 
-img {
-  width: 100%;
-}
-
+/* Links*/
 a {
   color: #FF1744;
   text-decoration: none; /* No underlining */
@@ -93,59 +153,26 @@ a:active { /* selected link */
 }
 
 
-/* END of your “styles.css” document. As this is a very specific rule only for hyperlinks that have the button class, it needs to go close to the bottom; otherwise, it could get overwritten by other less specific rules, such as the general styling rules for all of your hyperlinks.*/
-.button {
-  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #263238;
-  color: #ffffff; /* needed to override the default link color */
-  font-weight: 400;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #263238; /* width of the border, type, color */
-  transition: 0.2s opacity;
-}
-.button:hover,
-.button:focus,
-.button:visited {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
-  text-decoration: none;
-  color: #ffffff;
-}
-.button:active {
-  background-color: #FF1744;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-
-/* For Contact Buttons */
-.button.contact {
-  background-color: transparent;
-  color: #263238;
-  text-transform: uppercase;
-  border: 2px solid #263238;
-}
-.button.contact:hover {
-  background-color: #263238;
-  color: #ffffff;
-}
-.button.contact:active {
-  background-color: #FF1744;
-  text-decoration: none;
-  color: #ffffff;
-  border: 2px solid #FF1744;
-}
 
 /* Layout styling */
 
 .container {
   padding: 0 15px;
 }
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
-
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 
 /*for NAVBAR*/
@@ -164,7 +191,9 @@ nav > ul > li {
 nav > ul > li > a {
   padding: 0 15px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-family: Roboto,monospace;
+  letter-spacing: 5px;
+  font-weight: 300;
   color: #FF1744;
 }
 nav > ul > li > a:visited {
@@ -174,7 +203,10 @@ nav > ul > li > a:hover,
 a:focus {
   color: #c4001d;
   text-decoration: underline; /* Underlining when hovering over a link */
+  cursor: pointer;
+  font-size:18px;
 }
+
 nav > ul > li > a:active { /* selected link */
   color: #880e4f;
 }
@@ -183,35 +215,74 @@ nav {
   display: inline-block;
   width: 100%;
 }
+/* Header */
+header {
+  background-color: #E3F2FD;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  -webkit-box-shadow: 0px 10px 5px -3px rgba(50, 50, 50, 0.54);
+-moz-box-shadow:    0px 10px 5px -3px rgba(50, 50, 50, 0.54);
+box-shadow:         0px 10px 5px -3px rgba(50, 50, 50, 0.54);
+}
+* {
+  box-sizing: border-box;
+}
 
+/* Body */
+body {
+  font-family: 'Montserrat', sans-serif;
+background-color: #ffffff;
+  font-size: 1em; /* Sets the font size to 16px */
+  font-weight: 300; /* Sets the font weight to 300 */
+  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  color: #263238;
+}
 /*for HERO*/
 
 main {
   padding-top: 180px;
 }
+#hero span {
+  display: block;
+}
+
 #hero {
   background-color: #E3F2FD;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
+  text-align: center;
 }
 #hero h1 {
   margin: 0;
   padding: 0.67em 0;
 }
-#hero h1, h3 {
+#hero h1 {
   text-align: center;
   padding: 0.67em 0;
   margin: 0;
 }
-
+#hero h3 {
+  color: #FF1744;
+}
+#hero h2 {
+  max-width: 50%;
+  display: inline-block;
+}
+#hero p {
+  max-width: 50%;
+  display: inline-block;
+}
 
 
 /*for Work*/
 #work h2 {
-  text-align: center; /* Centers text */
+  text-align: center;
+  padding: 15px; /* Centers text */
 }
-#work .row{ padding-bottom: 25px;}
+#work .row { padding-bottom: 25px; border-bottom: 1px solid #263238; }
 
 
 /*for Intro on project sites*/
@@ -223,9 +294,9 @@ main {
 }
 
 /*for ABOUT*/
-#skill .row {
-  float: right;
-}
+#about-page h3 { margin-top: 0;}
+
+
 /*for Footer*/
 #contact { padding-top: 25px; border-top: 1px solid #4a4a4a; }
 
@@ -247,4 +318,106 @@ main {
 }
 #social ul > li {
   display: inline-block;
+}
+
+/* END of your “styles.css” document. As this is a very specific rule only for hyperlinks that have the button class, it needs to go close to the bottom; otherwise, it could get overwritten by other less specific rules, such as the general styling rules for all of your hyperlinks.*/
+
+
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #263238;
+  color: #ffffff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #263238; /* width of the border, type, color */
+  transition: 0.2s opacity;
+  transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
+}
+.button:hover,
+.button:focus,
+.button:visited {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+  color: #ffffff;
+}
+.button:active {
+  background-color: #FF1744;
+  text-decoration: none;
+  color: #ffffff;
+}
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+/* For Contact Buttons */
+.button.contact {
+  background-color: transparent;
+  color: #263238;
+  text-transform: uppercase;
+  border: 2px solid #263238;
+  transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
+}
+.button.contact:hover {
+  cursor: pointer;
+  background-color: #263238;
+  color: #ffffff;
+  font-size:18px;
+}
+.button.contact:active {
+  background-color: #FF1744;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid #FF1744;
+}
+
+
+/* ==============================
+Medium devices (640px or larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+main {
+  padding-top: 99px;
+  }
+  .col-md-6 {
+  width: 50%;
+}
+[class*="col-"] {
+  float: left;
+  padding: 20px;
+}
+}
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+
+  .col-md-7 {
+    width: 58,33%;
+  }
+  .col-md-5 {
+  width: 51,66%;
+}
+}
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
 }
