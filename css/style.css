@@ -255,13 +255,10 @@ main {
   width: 100%;
   text-align: center;
 }
-#hero h1 {
-  margin: 0;
-  padding: 0.67em 0;
-}
+
 #hero h1 {
   text-align: center;
-  padding: 0.67em 0;
+  padding: 0.87em 0;
   margin: 0;
 }
 #hero h3 {
@@ -283,7 +280,11 @@ main {
   padding: 15px; /* Centers text */
 }
 #work .row { padding-bottom: 25px; border-bottom: 1px solid #263238; }
-
+#work .row:last-child { border-bottom: none;}
+#work h3 {
+  margin-top: 0;
+}
+border {padding: 20px;}
 
 /*for Intro on project sites*/
 #intro {
