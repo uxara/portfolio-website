@@ -423,7 +423,7 @@ nav > ul {
 .navtoggle li:not(:last-child) {
   display: inline-block;
 }
-.navtoggle li:last-child {
+.navtoggle li:nth-last-child(-n + 2) {
   display: none;
 }
 }
