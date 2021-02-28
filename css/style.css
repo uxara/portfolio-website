@@ -26,22 +26,7 @@ img {
   width: 100%;
   max-width: 1170px;
 }
-svg {
-  width: 100%;
-  max-width: 1170px;
-}
-.socialsvg svg {
-  width: 100%;
-  max-width: 30px;
-}
-.socialsvg svg:hover {
-  transform: scale(1.2);
-      cursor: pointer;
-}
-.socialsvg svg:hover {
-  transition: all 0.2s;
-  transform-origin: 50% 50%;
-}
+
 /* Animation */
 
 @keyframes color-change1 {
@@ -182,11 +167,9 @@ a:active { /* selected link */
 nav > ul {
   list-style-type: none;
   padding: 0;
+  margin:0;
 }
 
-nav > ul > li {
-  display: inline-block;
-}
 
 nav > ul > li > a {
   padding: 0 15px;
@@ -204,22 +187,45 @@ a:focus {
   color: #c4001d;
   text-decoration: underline; /* Underlining when hovering over a link */
   cursor: pointer;
-  font-size:18px;
 }
 
 nav > ul > li > a:active { /* selected link */
   color: #880e4f;
 }
 
-nav {
-  display: inline-block;
-  width: 100%;
+.navtoggle li:not(:last-child) {
+  display: none; /* old version block*/
 }
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
 /* Header */
 header {
   background-color: #E3F2FD;
-  text-align: center;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   position: fixed;
   width: 100%;
   -webkit-box-shadow: 0px 10px 5px -3px rgba(50, 50, 50, 0.54);
@@ -242,7 +248,7 @@ background-color: #ffffff;
 /*for HERO*/
 
 main {
-  padding-top: 180px;
+  padding-top: 100px;
 }
 #hero span {
   display: block;
@@ -250,7 +256,7 @@ main {
 
 #hero {
   background-color: #E3F2FD;
-  padding: 20px 0;
+  padding: 40px 0;
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -301,11 +307,6 @@ border {padding: 20px;}
 /*for Footer*/
 #contact { padding-top: 25px; border-top: 1px solid #4a4a4a; }
 
-
-#social svg {
-  width: 40px;
-  margin: 0.80em;
-}
 #social {
   display: inline-block;
   width: 100%;
@@ -314,11 +315,22 @@ border {padding: 20px;}
 }
 #social ul {
   list-style-type: none;
-  padding: 0;
   width: 100%;
 }
 #social ul > li {
+  padding: 10px;
   display: inline-block;
+  color: #263238;
+}
+#social ul > li > i {
+  color: #263238;
+}
+.fab.fa-linkedin.fa-lg, .fab.fa-behance-square.fa-lg, .fas.fa-archive {
+  color: #263238;
+}
+
+#institute-page {
+    box-sizing: nonzero;
 }
 
 /* END of your “styles.css” document. As this is a very specific rule only for hyperlinks that have the button class, it needs to go close to the bottom; otherwise, it could get overwritten by other less specific rules, such as the general styling rules for all of your hyperlinks.*/
@@ -389,7 +401,7 @@ Medium devices (640px or larger)
     margin-top: 4px;
   }
 main {
-  padding-top: 99px;
+  padding-top: 180px;
   }
   .col-md-6 {
   width: 50%;
@@ -398,7 +410,24 @@ main {
   float: left;
   padding: 20px;
 }
+.logo {
+min-width: 200px;
+display: left;
 }
+nav > ul > li {
+  display: inline-block;
+}
+nav > ul {
+  margin: 1em 0;
+}
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+.navtoggle li:last-child {
+  display: none;
+}
+}
+
 
 /* ==============================
 Large devices (1024px or larger)
@@ -411,7 +440,9 @@ Large devices (1024px or larger)
   .col-md-5 {
   width: 51,66%;
 }
+
 }
+
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
