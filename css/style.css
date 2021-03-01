@@ -321,6 +321,10 @@ border {padding: 20px;}
 .card {
   padding-bottom: : 10px;
 }
+#work .col-md-6 {
+  width: 33.3%;
+}
+
 /*for intro of project sites*/
 #intro , #projectchallenge {
   background-color: #E3F2FD;
