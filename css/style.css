@@ -151,7 +151,7 @@ a:active { /* selected link */
 }
 
 .row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  margin: 25px 10px; /* 25px top and bottom, 0 left and right */
 }
 .row::after {
   content: "";
@@ -199,7 +199,7 @@ nav > ul > li > a:active { /* selected link */
 .navtoggle, .navtoggle.responsive {
   position: relative;
 }
-.navtoggle li .icon {
+.navtoggle li .icon , .navtoggle li .icon-bars{
   position: absolute;
   right: 0;
   top: 2px;
@@ -220,6 +220,13 @@ nav > ul > li > a:active { /* selected link */
 
 .navtoggle.responsive li:last-child  {
   padding: 0 0 10px;
+}
+
+.navtoggle li:nth-last-child(-n + 2) {
+  border-top: none;
+}
+.responsive .icon-bars {
+display: none;
 }
 
 /* Header */
@@ -292,14 +299,92 @@ main {
 }
 border {padding: 20px;}
 
-/*for Intro on project sites*/
-#intro {
+
+/*for Cards*/
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.card {
+  padding-bottom: : 10px;
+}
+/*for intro of project sites*/
+#intro , #projectchallenge {
   background-color: #E3F2FD;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
 }
 
+/* for donkey project site*/
+
+.sliderdonkey {
+  width: 90%;
+  height: 600px;
+  margin:50px auto;
+  position: relative;
+  box-shadow: 0px 0px 10px 3px grey;
+  overflow: hidden;
+  border: 5px solid #E3F2FD
+}
+
+.sliderdonkey figure {
+  margin: 0px;
+  position: relative;
+  width: 500%;
+  left: 0px;
+  transition:1s ease-in-out;
+}
+
+.sliderdonkey img {
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+/* fonts styling for projectsite*/
+#projectchallenge ul {
+  font-family: 'Montserrat', sans-serif;
+
+  line-height:180%
+}
+#projectbutton {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/*button style for project slider*/
+
+.btn-next, .btn-prev {
+  position: absolute;
+  top: 45%;
+  cursor: pointer;
+  color: white;
+  background: #E3F2FD;
+  padding: 20px;
+  font-size: 50px;
+  border: none;
+}
+.btn-next {
+  right: 0px;
+}
+.btn-prev {
+  left: 0px;
+}
 /*for ABOUT*/
 #about-page h3 { margin-top: 0;}
 
@@ -367,6 +452,7 @@ border {padding: 20px;}
 
 /* For Contact Buttons */
 .button.contact {
+  font-family: 'Montserrat', sans-serif;
   background-color: transparent;
   color: #263238;
   text-transform: uppercase;

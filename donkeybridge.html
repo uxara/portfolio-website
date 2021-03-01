@@ -24,8 +24,9 @@
           <ul class="navigation">
             <li><a href="index.html">Work</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
-            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-times"></i></a></li>
+            <li><a href="javascript:void(0);" class="icon-bars" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
           </ul>
         </nav>
       </div>
@@ -42,206 +43,69 @@
       </div>
     </div>
 
-    <!-- For Project Image and Intro Text -->
-    <div id="intro">
+<!-- for project slider -->
+<div class="container">
+<div class="sliderdonkey" id="intro">
+<figure>
+
+  <img src="img/donkey bridge/mockup donkey start@2x.jpg">
+  <img src="img/donkey bridge/DB-Design-Process@2x.jpg">
+  <img src="img/donkey bridge/Donkey-Bridge@2x.jpeg">
+  <img src="img/donkey bridge/mockup onboarding donkey@2x.jpg">
+
+</figure>
+<!-- next and prev buttons -->
+<button class="btn-prev"><i class="fa fa-arrow-circle-left"</i></button>
+<button class="btn-next"><i class="fa fa-arrow-circle-right"</i></button>
+</div>
+</div>
+    <!-- For Donkey Project Overview -->
+    <div id="projectchallenge" class="container">
       <div class="container">
-        <picture>
-          <source srcset="img/donkey bridge/mockup donkey start@1x.jpg" media="(max-width:767px)">
-          <img src="img/donkey bridge/mockup donkey start@2x.jpg" alt="Picture of paper wireframes and sketches">
-        </picture>
+        <h2>Overview</h2>
+        <p>This is a case study about an ux design concept  created in spring 2020.</p>
+        <p>My role: UX-Designer</p>
       </div>
-      <div class="container">
-        <div class="row" id="introduction" class="container">
-          <!-- For My Story -->
-          <div class="col-md-6">
-            <h2>Introduction</h2>
-            <p>This is a case study about ux design concept  created in spring 2020.</p>
-            <h4>My Role:</h4>
-            <p>UI/UX Designer</p>
-          </div>
-          <!-- For Skills and Tools -->
-          <div>
-            <div class="col-md-6">
-              <div>
-                <h3>Challenge & Goal</h3>
-              </div>
-              <div>
-                <h4>Challenge</h4>
-                <p>How might we help visual learners to memorise new vocabulary quickly on the go.
-                </p>
-              </div>
-              <div>
-                <h4>Goal</h4>
-                <p>Creating a vocabulary learning app which supports the easy memorising of vocabulary in a very visual way.
-                </p>
-              </div>
-            </div>
-            <div>
-              <div class="col-md-6">
-                <div>
-                  <h3>Methods & Tools</h3>
-                </div>
-                <div>
-                  <h4>Methods</h4>
-                  <ul>
-                    <li>Competitor Research</li>
-                    <li>User Research (User Interviews)</li>
-                    <li>User Persona</li>
-                    <li>Task Analysis</li>
-                    <li>Crazy 8's Technique</li>
-                    <li>Low Fidelity Prototyping</li>
-                    <li>User Testing</li>
-                    <li>High Fidelity Wireframes</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4>Tools</h4>
-                  <ul>
-                    <li>Adobe Comp App (Ipad)</li>
-                    <li>Marvel App</li>
-                    <li>Whimsical</li>
-                    <li>Pen&Paper&Postits</li>
-                    <li>Voice Recorder App</li>
-                    <li>Videocamera App</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="row" class="container">
+      <div class="col-md-6" class="container">
+        <h3>Challenge</h3>
+        <p>How might we help visual learners to memorise new vocabulary quickly on the go.</p>
+      </div>
+      <div class="col-md-6" class="container">
+        <h3>Goal</h3>
+        <p>Creating a vocabulary learning app which supports the easy memorising of vocabulary in a very visual way. </p>
       </div>
     </div>
-
-    <div class="container">
-      <!-- For The Process -->
-      <div>
-        <div>
-          <h2>The Process</h2>
-        </div>
+    <div class="row" class="container">
+      <div class="col-md-6" class="container">
+        <h3>Process Steps</h3>
+        <ul>
+          <li>Competitor Research</li>
+          <li>User Research (User Interviews)</li>
+          <li>User Persona</li>
+          <li>Task Analysis</li>
+          <li>Crazy 8's Technique</li>
+          <li>Low Fidelity Prototyping</li>
+          <li>User Testing</li>
+          <li>High Fidelity Wireframes</li>
+        </ul>
       </div>
-      <!-- For Research -->
-      <div>
-        <div>
-          <picture>
-            <source srcset="img/donkey bridge/DB-Design-Process@1x.jpg" media="(max-width:767px)">
-            <img src="img/donkey bridge/DB-Design-Process@2x.jpg" alt="Picture of paper wireframes and sketches">
-          </picture>
-        </div>
-        <div class="row" id="about" class="container">
-          <!-- For My Story -->
-          <div class="col-md-6">
-            <h2>Introduction</h2>
-            <p>This is a case study about ux design concept  created in spring 2020</p>
-          </div>
-          <!-- For Skills and Tools -->
-          <div>
-            <div class="col-md-6">
-              <div>
-                <h2>Challenge & Goal</h2>
-              </div>
-              <div>
-                <h3>Challenge</h3>
-                <ul>
-                  <li>User Research: Competitor Analysis, User Interviews</li>
-                  <li>Conceptuazion: User Flows</li>
-                  <li>Prototyping: Paper Wireframes and Low- to High-Fidelity Prototyping</li>
-                  <li>UI: Style Guides, Illustration</li>
-                </ul>
-              </div>
-              <div>
-                <h3>Goal</h3>
-                <ul>
-                  <li>Adobe XD</li>
-                  <li>Figma</li>
-                  <li>Balsamiq</li>
-                  <li>Pen&Paper</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h3>Research</h3>
-        </div>
-        <div>
-          <p>The research was splitted in a competitor research and a user research phase.The competitor research gave me a better understanding of what functionalities of vocabulary learning apps are currently existing. The user research gave me insights of the needs and goals of my target group.</p>
-        </div>
-      </div>
-      <!-- For Ideation -->
-      <div>
-        <div>
-          <picture>
-            <source srcset="img/donkey bridge/Donkey-Bridge@1x.jpeg" media="(max-width:767px)">
-            <img src="img/donkey bridge/Donkey-Bridge@2x.jpeg" alt="Picture of paper wireframes and sketches">
-          </picture>
-        </div>
-        <div>
-          <h3>Ideation</h3>
-        </div>
-        <div>
-          <p>Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma, bar panna so Barista cortado trifecta extraction, skinny aftertaste filter java cultivar cinnamon. Mazagran trade Barista french and Acerbic acerbic Aged milk cinnamon origin
-            carajillo, mountain coffee roast mug wings Bar single viennese pumpkin go pot, dripper crema flavour mocha At bar sit medium au breve. Espresso Brewed Blue iced Americano robust whipped, bar percolator grounds go saucer robusta, Au shop
-            Affogato Bar aged coffee, Barista blue strong origin aftertaste. Blue skinny coffee breve Brewed acerbic, siphon steamed And foam, qui Arabica ut latte. Go brewed At aftertaste sweet cinnamon caffeine rich strong caramelization
-            Aftertaste, Body roast body frappuccino Beans extraction sit americano Aroma.</p>
-        </div>
-        <!-- For Wirframe -->
-        <div>
-          <div>
-            <picture>
-              <source srcset="img/donkey bridge/Donkey-Bridge@1x.jpeg" media="(max-width:767px)">
-              <img src="img/donkey bridge/Donkey-Bridge@2x.jpeg" alt="Picture of paper wireframes and sketches">
-            </picture>
-          </div>
-          <div>
-            <h3>Wireframe</h3>
-          </div>
-          <div>
-            <p>Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma, bar panna so Barista cortado trifecta extraction, skinny aftertaste filter java cultivar cinnamon. Mazagran trade Barista french and Acerbic acerbic Aged milk cinnamon
-              origin carajillo, mountain coffee roast mug wings Bar single viennese pumpkin go pot, dripper crema flavour mocha At bar sit medium au breve. Espresso Brewed Blue iced Americano robust whipped, bar percolator grounds go saucer robusta,
-              Au shop Affogato Bar aged coffee, Barista blue strong origin aftertaste. Blue skinny coffee breve Brewed acerbic, siphon steamed And foam, qui Arabica ut latte. Go brewed At aftertaste sweet cinnamon caffeine rich strong caramelization
-              Aftertaste, Body roast body frappuccino Beans extraction sit americano Aroma.</p>
-          </div>
-        </div>
-        <!-- For Design -->
-        <div>
-          <div>
-            <picture>
-              <source srcset="img/donkey bridge/Donkey-Bridge@1x.jpeg" media="(max-width:767px)">
-              <img src="img/donkey bridge/Donkey-Bridge@2x.jpeg" alt="Picture of paper wireframes and sketches">
-            </picture>
-          </div>
-          <div>
-            <h3>Design</h3>
-          </div>
-          <div>
-            <p>Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma, bar panna so Barista cortado trifecta extraction, skinny aftertaste filter java cultivar cinnamon. Mazagran trade Barista french and Acerbic acerbic Aged milk cinnamon
-              origin carajillo, mountain coffee roast mug wings Bar single viennese pumpkin go pot, dripper crema flavour mocha At bar sit medium au breve. Espresso Brewed Blue iced Americano robust whipped, bar percolator grounds go saucer robusta,
-              Au shop Affogato Bar aged coffee, Barista blue strong origin aftertaste. Blue skinny coffee breve Brewed acerbic, siphon steamed And foam, qui Arabica ut latte. Go brewed At aftertaste sweet cinnamon caffeine rich strong caramelization
-              Aftertaste, Body roast body frappuccino Beans extraction sit americano Aroma.</p>
-          </div>
-        </div>
-        <!-- For Prototype -->
-        <div>
-          <div>
-            <picture>
-              <source srcset="img/donkey bridge/Donkey-Bridge@1x.jpeg" media="(max-width:767px)">
-              <img src="img/donkey bridge/Donkey-Bridge@2x.jpeg" alt="Picture of paper wireframes and sketches">
-            </picture>
-          </div>
-          <div>
-            <h3>Prototype</h3>
-          </div>
-          <div>
-            <p>Arabica Acerbic Affogato Aftertaste Aged Americano And Aroma, bar panna so Barista cortado trifecta extraction, skinny aftertaste filter java cultivar cinnamon. Mazagran trade Barista french and Acerbic acerbic Aged milk cinnamon
-              origin carajillo, mountain coffee roast mug wings Bar single viennese pumpkin go pot, dripper crema flavour mocha At bar sit medium au breve. Espresso Brewed Blue iced Americano robust whipped, bar percolator grounds go saucer robusta,
-              Au shop Affogato Bar aged coffee, Barista blue strong origin aftertaste. Blue skinny coffee breve Brewed acerbic, siphon steamed And foam, qui Arabica ut latte. Go brewed At aftertaste sweet cinnamon caffeine rich strong caramelization
-              Aftertaste, Body roast body frappuccino Beans extraction sit americano Aroma.</p>
-          </div>
-        </div>
-
+      <div class="col-md-6" class="container">
+        <h3>Tools</h3>
+        <ul>
+          <li>Adobe Comp App (Ipad)</li>
+          <li>Marvel App</li>
+          <li>Whimsical</li>
+          <li>Pen&Paper&Postits</li>
+          <li>Voice Recorder App</li>
+          <li>Videocamera App</li>
+        </ul>
       </div>
     </div>
-
+    <div id="projectbutton" class="container">
+      <a href="https://www.notion.so/DONKEY-BRIDGE-2f68750ef0ab4a25ac5386eb672c8798" target="_blank" class="button">Read Full Case Study</a>
+    </div>
+    </div>
   </main>
   <!-- For the footer  -->
   <footer id="contact" class="container">
@@ -250,7 +114,7 @@
       <p>Do you like my work and want to discuss opportunities? Please get in touch.
         Call: <a href="tel:+491234567">+49 1234567</a> or use your favorite messenger (WhatsApp, Telegram, Signal). Prefer sending an email?</p>
       <div>
-        <a href="mailto:strhlg@gmail.com?subject=Saw your Website and like to connect" class="button contact">Write Me</a>
+        <a href="mailto:sarahschwesig@gmail.com?subject=Saw your Website and like to connect" class="button contact">Write Me</a>
       </div>
     </div>
     <!--Social Media Layout and Placeholders-->
