@@ -335,7 +335,7 @@ border {padding: 20px;}
 
 /* for donkey project site*/
 
-.carousel.slide {
+.sliderdonkey {
   width: 90%;
   height: 400px;
   margin:50px auto;
@@ -344,7 +344,7 @@ border {padding: 20px;}
   overflow: hidden;
 }
 
-/*.carousel.inner {
+.sliderdonkey{
   margin: 0px;
   position: relative;
   width: 500%;
@@ -352,7 +352,7 @@ border {padding: 20px;}
   transition:1s ease-in-out;
 }
 
-.carousel.slide img {
+.sliderdonkey img {
   width: 20%;
   height: 100%;
   float: left;
