@@ -304,9 +304,11 @@ main {
 /*for Work*/
 #work h2 {
   text-align: center;
-  padding: 15px; /* Centers text */
+  padding-top: 110px; /* Centers text */
 }
-
+#work span {
+  margin-top: 20px;
+}
 border {padding: 20px;}
 
 
