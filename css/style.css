@@ -409,6 +409,7 @@ border {padding: 20px;}
 
   line-height:180%
 }
+
 #projectbutton {
   font-family: 'Montserrat', sans-serif;
 }
@@ -436,11 +437,11 @@ border {padding: 20px;}
 #about-page h3 { margin-top: 0;}
 
 .interests h2 {
-  padding-top: 10px;
+  padding-top: 50px;
   text-align: center;
 }
 #voluntary h2{
-  padding-top: 10px;
+  padding-top: 50px;
   text-align: center;
 }
 .volunlogos {
@@ -602,6 +603,9 @@ nav > ul {
 }
 .navtoggle li:nth-last-child(-n + 2) {
   display: none;
+}
+.splide {
+  max-width: 900px;
 }
 }
 
