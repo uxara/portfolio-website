@@ -17,10 +17,6 @@ text.color= #eceff1
 
 */
 
-
-
-
-
 /* Media */
 img {
   width: 100%;
@@ -30,10 +26,19 @@ img {
 /* Animation */
 
 @keyframes color-change1 {
-  0% {fill: #edc655;}
-  50% {fill: #fcffad;}
-  100% {fill: #f76414;}
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
 }
+
 .backclouds {
   animation-duration: 4s;
   animation-name: color-change1;
@@ -43,10 +48,19 @@ img {
 }
 
 @keyframes color-change2 {
-  0% {fill: #ffffff;}
-  50% {fill: #fdcdee;}
-  100% {fill: #fdfdfd;}
+  0% {
+    fill: #fff;
+  }
+
+  50% {
+    fill: #fdcdee;
+  }
+
+  100% {
+    fill: #fdfdfd;
+  }
 }
+
 .background {
   animation-duration: 4s;
   animation-name: color-change2;
@@ -56,10 +70,14 @@ img {
 }
 
 @keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(500px,50px);}
-}
+  from {
+    transform: translate(0, 50px);
+  }
 
+  to {
+    transform: translate(500px, 50px);
+  }
+}
 
 .cloud-front {
   animation-duration: 10s;
@@ -70,22 +88,32 @@ img {
 }
 
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
+
 .cloud-back {
   animation: 24s cloud-move-reverse infinite alternate linear;
 }
 
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
+
 .small-cloud {
   animation: 14s cloud-move-reverse infinite alternate linear;
 }
-
-
 
 /* Fonts */
 p {
@@ -94,7 +122,10 @@ p {
   font-size: 17px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Roboto Mono', monospace;
   line-height: 1.4;
   font-size: 18px;
@@ -114,36 +145,40 @@ h3 {
   font-size: 1.75em;
   font-weight: 600;
 }
+
 h4 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.35em;
   font-weight: 600;
 }
 
-/* Links*/
+/* Links */
+
 a {
-  color: #FF1744;
+  color: #c4001d;
   text-decoration: none; /* No underlining */
 }
+
 a:visited { /* visited link */
   color: #ff616f;
 }
+
 a:hover,
 a:focus {
   color: #c4001d;
   text-decoration: underline; /* Underlining when hovering over a link */
 }
+
 a:active { /* selected link */
   color: #880e4f;
 }
-
-
 
 /* Layout styling */
 
 .container {
   padding: 0 15px;
 }
+
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -153,35 +188,37 @@ a:active { /* selected link */
 .row {
   margin: 25px 10px; /* 25px top and bottom, 0 left and right */
 }
+
 .row::after {
   content: "";
   clear: both;
   display: table;
 }
 
-
-/*for NAVBAR*/
+/* for NAVBAR */
 .logo {
   max-width: 70px;
 }
+
 nav > ul {
   list-style-type: none;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
-
 
 nav > ul > li > a {
   padding: 0 15px;
   text-transform: uppercase;
-  font-family: Roboto,monospace;
+  font-family: Roboto, monospace;
   letter-spacing: 5px;
-  font-weight: 300;
-  color: #FF1744;
+  font-weight: 400;
+  color: #c4001d;
 }
+
 nav > ul > li > a:visited {
   color: #ff616f;
 }
+
 nav > ul > li > a:hover,
 a:focus {
   color: #c4001d;
@@ -194,52 +231,61 @@ nav > ul > li > a:active { /* selected link */
 }
 
 .navtoggle li:not(:last-child) {
-  display: none; /* old version block*/
+  display: none; /* old version block */
 }
-.navtoggle, .navtoggle.responsive {
+
+.navtoggle,
+.navtoggle.responsive {
   position: relative;
 }
-.navtoggle li .icon , .navtoggle li .icon-bars{
+
+.navtoggle li .icon,
+.navtoggle li .icon-bars {
   position: absolute;
   right: 0;
   top: 2px;
   font-size: 20px;
   padding-right: 0;
 }
-.navtoggle.responsive li  {
+
+.navtoggle.responsive li {
   display: block;
 }
+
 .navtoggle.responsive nav {
   padding: 24px 0 0;
 }
-.navtoggle.responsive li  {
+
+.navtoggle.responsive li {
   display: block;
   padding: 10px 0;
-  border-top: 1px solid rgba(255,127,80,0.5);
+  border-top: 1px solid rgba(255, 127, 80, 0.5);
 }
 
-.navtoggle.responsive li:last-child  {
+.navtoggle.responsive li:last-child {
   padding: 0 0 10px;
 }
 
 .navtoggle li:nth-last-child(-n + 2) {
   border-top: none;
 }
+
 .responsive .icon-bars {
-display: none;
+  display: none;
 }
 
 /* Header */
 header {
-  background-color: #E3F2FD;
+  background-color: #e3f2fd;
   padding: 10px 0 4px;
   position: fixed;
   z-index: 1000;
   width: 100%;
   -webkit-box-shadow: 0px 10px 5px -3px rgba(50, 50, 50, 0.54);
--moz-box-shadow:    0px 10px 5px -3px rgba(50, 50, 50, 0.54);
-box-shadow:         0px 10px 5px -3px rgba(50, 50, 50, 0.54);
+  -moz-box-shadow: 0px 10px 5px -3px rgba(50, 50, 50, 0.54);
+  box-shadow: 0px 10px 5px -3px rgba(50, 50, 50, 0.54);
 }
+
 * {
   box-sizing: border-box;
 }
@@ -247,29 +293,32 @@ box-shadow:         0px 10px 5px -3px rgba(50, 50, 50, 0.54);
 /* Body */
 body {
   font-family: 'Montserrat', sans-serif;
-background-color: #ffffff;
+  background-color: #fff;
   font-size: 1em; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
   color: #263238;
 }
-/*for HERO*/
+
+/* for HERO */
 
 main {
   padding-top: 100px;
   margin-bottom: 50px;
 }
+
 #hero span {
   display: block;
 }
 
 #hero {
-  background-color: #E3F2FD;
+  background-color: #e3f2fd;
   padding: 40px 0;
   display: inline-block;
   width: 100%;
   text-align: center;
 }
+
 #hero .row {
   max-width: 1170px;
   margin: auto;
@@ -280,14 +329,10 @@ main {
   padding: 0.87em 0;
   margin: 0;
 }
+
 #hero h3 {
   display: inline-block;
 }
-#hero h2 {
-
-
-}
-
 
 #hero .gif {
   max-width: auto;
@@ -299,39 +344,42 @@ main {
   padding: 0 20px;
 }
 
+/* for Work */
 
-
-/*for Work*/
 #work h2 {
   text-align: center;
   padding-top: 110px; /* Centers text */
 }
+
 #work span {
   margin-top: 20px;
 }
-border {padding: 20px;}
 
+border {
+  padding: 20px;
+}
 
-/*for Cards*/
+/* for Cards */
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   text-align: center;
-  background-color: #E3F2FD;
+  background-color: #e3f2fd;
   transition: 0.3s;
   border-radius: 5px;
   padding: 20px;
   margin: 15px;
 }
 
-.card>h4 {
-  margin:15px;
-}
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+.card > h4 {
+  margin: 15px;
 }
 
-.card>img {
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card > img {
   width: 100%;
 }
 
@@ -343,15 +391,16 @@ border {padding: 20px;}
 }
 
 /* Remove extra left and right margins, due to padding in columns */
-#work .row {margin: 0 -5px;}
+#work .row { margin: 0 -5px; }
 
 /* Clear floats after the columns */
-#work .row:after {
+#work .row::after {
   content: "";
   display: table;
   clear: both;
 }
-#hero .row:after {
+
+#hero .row::after {
   content: "";
   display: table;
   clear: both;
@@ -364,35 +413,30 @@ border {padding: 20px;}
     display: block;
     margin-bottom: 20px;
   }
+
   /* Add some padding inside the card container */
   #work .container {
     padding: 2px 16px;
   }
 }
 
-
-
-
-
-
-/* for donkey project site*/
+   /* for donkey project site */
 
 .splide {
   max-width: 90%;
   height: auto;
-  margin:50px auto;
+  margin: 50px auto;
   position: relative;
   box-shadow: 0px 0px 10px 3px grey;
   overflow: hidden;
-  transition:1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
-.sliderdonkey{
-
+.sliderdonkey {
   position: relative;
   width: 500%;
   left: 0px;
-  transition:1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .sliderdonkey img {
@@ -400,53 +444,64 @@ border {padding: 20px;}
   height: 100%;
   float: left;
 }
+
 .overview {
   position: absolute;
 }
-/* fonts styling for projectsite*/
+
+/* fonts styling for projectsite */
+
 #projectchallenge ul {
   font-family: 'Montserrat', sans-serif;
-
-  line-height:180%
+  line-height: 180%;
 }
 
 #projectbutton {
   font-family: 'Montserrat', sans-serif;
+  margin-left: 20px;
 }
 
+/* button style for project slider */
 
-/*button style for project slider*/
-
-.btn-next, .btn-prev {
+.btn-next,
+.btn-prev {
   position: absolute;
   top: 45%;
   cursor: pointer;
   color: white;
-  background: #E3F2FD;
+  background: #e3f2fd;
   padding: 20px;
   font-size: 50px;
   border: none;
 }
+
 .btn-next {
   right: 0px;
 }
+
 .btn-prev {
   left: 0px;
 }
-/*for ABOUT*/
-#about-page h3 { margin-top: 0;}
+
+/* for ABOUT */
+#about-page h3 {
+  margin-top: 0;
+}
 
 .interests h2 {
   padding-top: 50px;
   text-align: center;
 }
-#voluntary h2{
+
+#voluntary h2 {
   padding-top: 50px;
   text-align: center;
 }
+
 .volunlogos {
-  max-width: 120px
+  max-width: 120px;
 }
+
 .wirlogo {
   max-height: 120px;
   width: auto;
@@ -458,6 +513,7 @@ border {padding: 20px;}
   text-align: center;
   padding-top: 30px;
 }
+
 #volunlogos > ul {
   list-style-type: none;
   width: 100%;
@@ -467,13 +523,17 @@ border {padding: 20px;}
   padding: 20px;
   display: inline-block;
 }
+
 #volunlogos ul > li > img {
   max-width: 20px;
 }
 
-/*for Footer*/
-#contact { padding-top: 25px; border-top: 1px solid #4a4a4a;
-  background-color: #ffff;}
+/* for Footer */
+#contact {
+  padding-top: 25px;
+  border-top: 1px solid #4a4a4a;
+  background-color: #ffff;
+}
 
 #social {
   display: inline-block;
@@ -481,33 +541,34 @@ border {padding: 20px;}
   text-align: center;
   padding-top: 30px;
 }
+
 #social ul {
   list-style-type: none;
   width: 100%;
 }
+
 #social ul > li {
   padding: 15px;
   display: inline-block;
   color: #263238;
 }
+
 #social ul > li > i {
   color: #263238;
 }
-.fab.fa-linkedin.fa-2x, .fab.fa-behance-square.fa-2x, .fas.fa-archive.fa-2x {
+
+.fab.fa-linkedin.fa-2x,
+.fab.fa-behance-square.fa-2x,
+.fas.fa-archive.fa-2x {
   color: #263238;
 }
 
-#institute-page {
-    box-sizing: nonzero;
-}
-
-/* END of your “styles.css” document. As this is a very specific rule only for hyperlinks that have the button class, it needs to go close to the bottom; otherwise, it could get overwritten by other less specific rules, such as the general styling rules for all of your hyperlinks.*/
-
+/* END of your “styles.css” document. As this is a very specific rule only for hyperlinks that have the button class, it needs to go close to the bottom; otherwise, it could get overwritten by other less specific rules, such as the general styling rules for all of your hyperlinks. */
 
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #263238;
-  color: #ffffff; /* needed to override the default link color */
+  color: #fff; /* needed to override the default link color */
   font-weight: 400;
   padding: 10px;
   border-radius: 3px;
@@ -515,23 +576,25 @@ border {padding: 20px;}
   transition: 0.2s opacity;
   transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
 }
+
 .button:hover,
 .button:focus,
 .button:visited {
   opacity: 0.8; /* Reduces the opacity of the button to 80% */
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
 }
+
 .button:active {
-  background-color: #FF1744;
+  background-color: #ff1744;
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
 }
+
 .button:hover {
   cursor: pointer;
   opacity: 0.8;
 }
-
 
 /* For Contact Buttons */
 .button.contact {
@@ -542,36 +605,38 @@ border {padding: 20px;}
   border: 2px solid #263238;
   transition: 0.4s opacity, 0.5s background-color, 0.4s font-size;
 }
+
 .button.contact:hover {
   cursor: pointer;
   background-color: #263238;
-  color: #ffffff;
-  font-size:18px;
-}
-.button.contact:active {
-  background-color: #FF1744;
-  text-decoration: none;
-  color: #ffffff;
-  border: 2px solid #FF1744;
+  color: #fff;
+  font-size: 18px;
 }
 
+.button.contact:active {
+  background-color: #ff1744;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #ff1744;
+}
 
 /* ==============================
 Medium devices (640px or larger)
 ================================= */
 @media only screen and (min-width: 640px) {
-
   header {
     text-align: unset;
     padding: 20px 0 13px;
   }
+
   nav {
     width: auto;
     float: right;
     margin-top: 4px;
   }
-main {
-  padding-top: 100px;
+
+  main {
+    padding-top: 100px;
   }
 
   #hero .column {
@@ -580,78 +645,87 @@ main {
     padding: 0 30px;
   }
 
-
   .col-md-6 {
-  width: 50%;
-}
-[class*="col-"] {
-  float: left;
-  padding: 20px;
-}
-.logo {
-max-width: 70px;
-display: left;
-}
-nav > ul > li {
-  display: inline-block;
-}
-nav > ul {
-  margin: 1em 0;
-}
-.navtoggle li:not(:last-child) {
-  display: inline-block;
-}
-.navtoggle li:nth-last-child(-n + 2) {
-  display: none;
-}
-.splide {
-  max-width: 900px;
-}
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 20px;
+  }
+
+  .logo {
+    max-width: 70px;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+  }
+
+  nav > ul {
+    margin: 1em 0;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:nth-last-child(-n + 2) {
+    display: none;
+  }
+
+  .splide {
+    max-width: 900px;
+  }
 }
 
 .card {
-    min-height: 532px;
+  min-height: 532px;
 }
+
 /* ==============================
 For Hero columns devices (980px or smaller)
 ================================= */
 @media only screen and (max-width: 980px) {
-#hero .column {
-  width: 100%;
-  display: block;
-  margin-bottom: 20px;
+  #hero .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  /* Add some padding inside the card container */
+  #hero .container {
+    padding: 2px 16px;
+  }
+
+  #hero .gif {
+    max-width: 550px;
+  }
 }
 
-/* Add some padding inside the card container */
-#hero .container {
-padding: 2px 16px;
-}
-#hero .gif {
-  max-width: 550px;
-}
-}
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-
   .col-md-7 {
-    width: 58,33%;
+    width: 58.33%;
   }
-  .col-md-5 {
-  width: 51,66%;
-}
-#hero .gif {
-  max-width: 550px;
-}
 
+  .col-md-5 {
+    width: 51.66%;
+  }
+
+  #hero .gif {
+    max-width: 550px;
+  }
 }
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px)  {
 }
+
 /* ==============================
 Extra-large devices (1920px or larger)
 ================================= */
