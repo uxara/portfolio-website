@@ -8,3 +8,11 @@ function menuToggle() {
     x.className = 'navtoggle'
   }
 }
+
+$(document).ready(function () {
+  $('.navigation .navigation-links').click(function (event) {
+    if($('#myNavtoggle').hasClass('responsive')) {
+      $('#myNavtoggle').removeClass('responsive');
+    }
+  });
+});
