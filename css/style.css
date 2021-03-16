@@ -200,6 +200,11 @@ a:active { /* selected link */
   max-width: 70px;
 }
 
+.menu {
+  text-align: center;
+  padding: 0 10px;
+}
+
 nav > ul {
   list-style-type: none;
   padding: 0;
