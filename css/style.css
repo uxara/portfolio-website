@@ -200,6 +200,11 @@ a:active { /* selected link */
   max-width: 70px;
 }
 
+.menu {
+  padding: 0 10px 0 10px;
+  text-align: center;
+}
+
 nav > ul {
   list-style-type: none;
   padding: 0;
@@ -218,6 +223,7 @@ nav > ul > li > a {
 .navigation-links {
   padding: 0 15px;
   text-transform: uppercase;
+  text-align: center;
   font-family: Roboto, monospace;
   letter-spacing: 5px;
   font-weight: 400;
